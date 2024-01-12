@@ -1,0 +1,68 @@
+/* MyTable.module.css */
+.foldTable {
+    width: 100%;
+  }
+  
+  .view {
+    cursor: pointer;
+  }
+  
+  .view td:first-child,
+  .view th:first-child {
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .view td:first-child:before,
+  .view th:first-child:before {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 9px;
+    height: 16px;
+    margin-top: -8px;
+    font: 16px fontawesome;
+    color: #999;
+    content: '\f0d7';
+    transition: all 0.3s ease;
+  }
+  
+  .view:nth-child(4n-1) {
+    background: #eee;
+  }
+  
+  .view:hover {
+    background: #000;
+  }
+  
+  .view.open {
+    background: tomato;
+    color: white;
+  }
+  
+  .view.open td:first-child:before,
+  .view.open th:first-child:before {
+    transform: rotate(-180deg);
+    color: #333;
+  }
+  
+  .fold {
+    display: none;
+  }
+  
+  .fold.open {
+    display: table-row;
+  }
+  
+  .foldContent {
+    padding: 0.5em;
+  }
+  
+  .innerTable {
+    border: 2px solid #ccc;
+  }
+  
+  .innerTable tbody tr:nth-child(even) {
+    background: #eee;
+  }
+  

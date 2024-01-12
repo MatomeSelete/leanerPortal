@@ -18,7 +18,8 @@ function leanerlist({ leaners }) {
        <main>
         <div style={{border:"2px solid black", backgroundColor:"gray", margin:"5px"}}>
         {leaners.map(leaner => (
-          <Link href={`leaners/${leaner.id}`}>
+          // <Link href={`portfolio/${leaner.id}`} key={leaner.id}>
+            <Link href={'./portfolio/' + leaner.id} key={leaner.id}>
              <div style={{border:"2px solid red", backgroundColor:"gray", margin:"5px"}} key={leaner.id}>
                 <h3>{leaner.name}</h3>
              </div>
