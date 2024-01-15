@@ -13,6 +13,7 @@ const MyTable = () => {
 
   return (
     <table className={styles.foldTable}>
+        
       <tbody>
         {Array.from({ length: 10 }, (_, index) => (
           <React.Fragment key={index}>
@@ -20,41 +21,21 @@ const MyTable = () => {
               className={`${styles.view} ${isOpen[index] ? styles.open : ''}`}
               onClick={() => toggleRow(index)}
             >
-              <td>Company Name</td>
-              <td className={styles.pcs}>457</td>
-              <td className={styles.cur}>6535178</td>
-              <td>-</td>
-              <td className={styles.per}>50,71</td>
-              <td className={styles.per}>49,21</td>
-              <td className={styles.per}>0</td>
+              <td>TEC SKILLS</td>
+              <td className={styles.pcs}>SCORE</td>
+              <td className={styles.cur}>DETAILS</td>
+              <td className={styles.per}></td>
             </tr>
             <tr className={`${styles.fold} ${isOpen[index] ? styles.open : ''}`}>
               <td colSpan="7">
                 <div className={styles.foldContent}>
-                  <h3>Company Name</h3>
-                  <p>
+                  
+                  <p className={` ${styles.fristp }`}>
                     Pellentesque habitant morbi tristique senectus et netus et
                     malesuada fames ac turpis egestas.
                   </p>
-                  <table className={styles.innerTable}>
-                    <thead>
-                      <tr>
-                        <th>Company name</th>
-                        <th>Customer no</th>
-                        <th>Customer name</th>
-                        <th>Insurance no</th>
-                        <th>Strategy</th>
-                        <th>Start</th>
-                        <th>Current</th>
-                        <th>Diff</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        {/* ... (same structure as before) */}
-                      </tr>
-                    </tbody>
-                  </table>
+
+                  <p className={` ${styles.lastp }`} >fames ac turpis egestas</p>
                 </div>
               </td>
             </tr>
